@@ -7,7 +7,7 @@ class Shape
 {
 public:
    // pure virtual function providing interface framework.
-   virtual int getArea() = 0;
+   virtual double getArea() = 0;
    void setWidth(int w)
    {
       width = w;
@@ -17,8 +17,8 @@ public:
       height = h;
    }
 protected:
-   int width;
-   int height;
+   double width;
+   double height;
 };
 
 
@@ -26,7 +26,7 @@ protected:
 class Rectangle: public Shape
 {
 public:
-   int getArea()
+   double getArea()
    {
       return (width * height);
    }
@@ -34,7 +34,7 @@ public:
 class Triangle: public Shape
 {
 public:
-   int getArea()
+   double getArea()
    {
       return (width * height)/2;
    }
@@ -42,7 +42,7 @@ public:
 class Circle: public Shape
 {
 public:
-   int getArea()
+   double getArea()
    {
       return (width * width)*3.14;
    }
